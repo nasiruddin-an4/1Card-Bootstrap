@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Login - 1Card</title>
+    <meta name="description" content="Sign in to your 1Card account">
+    <meta name="keywords" content="1Card, login, sign in">
+
+    <!-- Favicons -->
+    <link href="assets/img/logo.png" rel="icon">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="login-page">
+
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div
+            class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                <img src="assets/img/logo.png" alt="">
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="services.html"><span>Services</span> <i
+                                class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="service-details.html">Card Printing Service</a></li>
+                            <li><a href="service-details.html">Tuition Fees Payment Service</a></li>
+                            <li><a href="service-details.html">Canteen Management Service</a></li>
+                            <li><a href="service-details.html">QR payment Service</a></li>
+                            <li><a href="service-details.html">DPay-Service</a></li>
+                            <li><a href="service-details.html">Recharge Service</a></li>
+                            <li><a href="service-details.html">Event Management Service</a></li>
+                            <li><a href="service-details.html">Entrance Exit Security Service</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <a class="btn-getstarted" href="login.html">Sign In</a>
+        </div>
+    </header>
+
+    <div class="premium-login-wrapper">
+        <div class="container h-100">
+            <div class="row h-100 g-0">
+                <!-- Left Side - Hero Section -->
+                <div class="col-lg-6 login-hero-section d-none d-lg-block">
+                    <div class="hero-content">
+                        <div class="hero-logo" data-aos="fade-down">
+                            <img src="assets/img/logo.png" alt="1card Logo" class="img-fluid">
+                        </div>
+                        <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
+                            Access your digital campus card, manage payments, and stay connected with your institution
+                            all in one place.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Side - Login Form -->
+                <div class="col-lg-6 login-form-section">
+                    <div class="form-container" data-aos="fade-left">
+
+                        <!-- Login Type Switcher -->
+                        <div class="login-type-switcher">
+                            <button class="type-btn active" data-type="user">
+                                <i class="bi bi-person-circle"></i>
+                                <span>User Login</span>
+                            </button>
+                            <button class="type-btn" data-type="guardian">
+                                <i class="bi bi-shield-fill-check"></i>
+                                <span>Guardian Login</span>
+                            </button>
+                        </div>
+
+                        <!-- User Login Form -->
+                        <div class="login-form-content active" id="user-form">
+                            <div class="form-header">
+                                <h2>Sign In to Your Account</h2>
+                                <p>Enter your credentials to access your dashboard</p>
+                            </div>
+
+                            <form action="#" method="post" class="premium-form">
+                                <div class="form-group">
+                                    <label for="userEmail">Email Address or User ID</label>
+                                    <div class="input-wrapper">
+                                        <i class="bi bi-envelope-fill"></i>
+                                        <input type="text" id="userEmail" class="form-input"
+                                            placeholder="Enter your email or user ID" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="userPassword">Password</label>
+                                    <div class="input-wrapper">
+                                        <i class="bi bi-lock-fill"></i>
+                                        <input type="password" id="userPassword" class="form-input"
+                                            placeholder="Enter your password" required>
+                                        <button type="button" class="toggle-password"
+                                            onclick="togglePassword('userPassword', this)">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="form-options">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" id="rememberMe">
+                                        <span class="checkmark"></span>
+                                        <span class="label-text">Remember me</span>
+                                    </label>
+                                    <a href="#" class="forgot-password">Forgot Password?</a>
+                                </div>
+
+                                <button type="submit" class="btn-submit">
+                                    <span>Sign In</span>
+                                    <i class="bi bi-arrow-right"></i>
+                                </button>
+
+                                <div class="divider">
+                                    <span>or continue with</span>
+                                </div>
+
+                                <div class="social-login-grid">
+                                    <button type="button" class="social-btn google">
+                                        <i class="bi bi-google"></i>
+                                        <span>Google</span>
+                                    </button>
+                                    <button type="button" class="social-btn microsoft">
+                                        <i class="bi bi-microsoft"></i>
+                                        <span>Microsoft</span>
+                                    </button>
+                                </div>
+
+                                <div class="form-footer">
+                                    <p>Don't have an account? <a href="#" class="signup-link">Create Account</a></p>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Guardian Login Form -->
+                        <div class="login-form-content" id="guardian-form">
+                            <div class="form-header">
+                                <h2>Guardian Access</h2>
+                                <p>Monitor and manage your student's account</p>
+                            </div>
+
+                            <form action="#" method="post" class="premium-form">
+                                <div class="form-group">
+                                    <label for="guardianId">Guardian ID or Mobile Number</label>
+                                    <div class="input-wrapper">
+                                        <i class="bi bi-person-badge-fill"></i>
+                                        <input type="text" id="guardianId" class="form-input"
+                                            placeholder="Enter your guardian ID or mobile" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="guardianPassword">Password</label>
+                                    <div class="input-wrapper">
+                                        <i class="bi bi-lock-fill"></i>
+                                        <input type="password" id="guardianPassword" class="form-input"
+                                            placeholder="Enter your password" required>
+                                        <button type="button" class="toggle-password"
+                                            onclick="togglePassword('guardianPassword', this)">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="form-options">
+                                    <label class="custom-checkbox d-flex">
+                                        <input type="checkbox" id="rememberGuardian">
+                                        <span class="checkmark"></span>
+                                        <span class="label-text">Remember me</span>
+                                    </label>
+                                    <a href="#" class="forgot-password">Forgot Password?</a>
+                                </div>
+
+                                <button type="submit" class="btn-submit">
+                                    <span>Sign In as Guardian</span>
+                                    <i class="bi bi-arrow-right"></i>
+                                </button>
+
+                                <div class="divider">
+                                    <span>or continue with</span>
+                                </div>
+
+                                <div class="social-login-grid">
+                                    <button type="button" class="social-btn google">
+                                        <i class="bi bi-google"></i>
+                                        <span>Google</span>
+                                    </button>
+                                    <button type="button" class="social-btn microsoft">
+                                        <i class="bi bi-microsoft"></i>
+                                        <span>Microsoft</span>
+                                    </button>
+                                </div>
+
+                                <div class="form-footer">
+                                    <p>Need help? <a href="#" class="signup-link">Contact Support</a></p>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Login Type Switcher
+        document.querySelectorAll('.type-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const type = this.dataset.type;
+
+                // Update buttons
+                document.querySelectorAll('.type-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                // Update forms
+                document.querySelectorAll('.login-form-content').forEach(form => form.classList.remove('active'));
+                document.getElementById(type + '-form').classList.add('active');
+            });
+        });
+
+        // Toggle Password Visibility
+        function togglePassword(inputId, button) {
+            const input = document.getElementById(inputId);
+            const icon = button.querySelector('i');
+
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.remove('bi-eye');
+                icon.classList.add('bi-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.remove('bi-eye-slash');
+                icon.classList.add('bi-eye');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
