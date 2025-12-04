@@ -1,3 +1,29 @@
+/* Global Overflow Prevention */
+html {
+  max-width: 100%;
+}
+
+body {
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+video,
+iframe,
+embed,
+object {
+  max-width: 100%;
+  height: auto;
+}
+
+
 :root {
   --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Nunito", sans-serif;
@@ -182,9 +208,9 @@ h6 {
   }
 
   .header .header-container {
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 10px 5px 10px 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 10px 5px 10px 10px;
   }
 
   .header .logo {
@@ -193,14 +219,16 @@ h6 {
 
   .header .btn-getstarted {
     order: 2;
-    margin: 0 10px 0 0;
-    padding: 6px 15px;
+    margin: 0 5px 0 0;
+    padding: 6px 12px;
+    font-size: 13px;
   }
 
   .header .navmenu {
     order: 3;
   }
 }
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -861,6 +889,40 @@ h6 {
 .stat-card h3 {
   color: white;
 }
+
+/* Mobile Responsive Fixes for Results Section */
+@media (max-width: 768px) {
+  .results-section {
+    padding: 3rem 0;
+  }
+
+  .results-section .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .results-section h2 {
+    font-size: 1.75rem !important;
+  }
+
+  .results-section p {
+    font-size: 0.95rem !important;
+  }
+
+  .stat-card {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .stat-card h3 {
+    font-size: 2rem !important;
+  }
+
+  .stat-card .fs-5 {
+    font-size: 1rem !important;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Service Card Section - Simple Hover Lift
@@ -2011,4 +2073,235 @@ h6 {
 
 .contact .contact-form .btn:hover {
   background-color: color-mix(in srgb, var(--accent-color), var(--contrast-color) 20%);
+}
+
+/*--------------------------------------------------------------
+# Additional Mobile Responsive Fixes
+--------------------------------------------------------------*/
+@media (max-width: 768px) {
+
+  /* Prevent all sections from overflowing */
+  section {
+    overflow-x: hidden;
+  }
+
+  /* Container fixes */
+  .container {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding-top: 120px;
+  }
+
+  .hero .hero-content h1 {
+    font-size: 1.75rem !important;
+  }
+
+  .hero .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .company-badge {
+    font-size: 13px;
+    padding: 8px 15px;
+  }
+
+  /* Services Section */
+  .services-section {
+    padding: 3rem 0;
+  }
+
+  .services-header h2 {
+    font-size: 1.75rem !important;
+  }
+
+  .services-header p {
+    font-size: 1rem;
+  }
+
+  /* Journey Section */
+  .journeysection {
+    padding: 3rem 0;
+  }
+
+  .journeysection h2 {
+    font-size: 1.75rem !important;
+  }
+
+  .journeyCard h3 {
+    font-size: 1.25rem !important;
+  }
+
+  .journeyCard p {
+    font-size: 0.9rem;
+  }
+
+  /* Features/Tabs Section */
+  .features {
+    padding: 3rem 0;
+  }
+
+  .custom-tabs {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .custom-tabs .nav-link {
+    margin: 5px 0;
+    width: 100%;
+  }
+
+  .custom-tabs .nav-link h4 {
+    font-size: 0.95rem;
+  }
+
+  /* Testimonials */
+  .testimonials-section {
+    padding: 3rem 0;
+  }
+
+  .testimonials-header .title {
+    font-size: 1.75rem !important;
+  }
+
+  .testimonials-card {
+    padding: 2rem 1rem !important;
+  }
+
+  .quote {
+    font-size: 1rem !important;
+  }
+
+  /* Pricing Section */
+  .pricing {
+    padding: 3rem 0;
+  }
+
+  .pricing-title h2 {
+    font-size: 1.75rem !important;
+  }
+
+  .pricing-card {
+    margin-bottom: 1.5rem;
+  }
+
+  /* FAQ Section */
+  .faq {
+    padding: 3rem 0;
+  }
+
+  .faq-title {
+    font-size: 1.75rem !important;
+  }
+
+  /* Download Section */
+  .download-section {
+    padding: 3rem 0;
+  }
+
+  .download-section h2 {
+    font-size: 1.75rem !important;
+  }
+
+  .download-img {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  /* Blog Section */
+  .blog-section {
+    padding: 3rem 0;
+  }
+
+  .blog-section .heading-primary {
+    font-size: 1.75rem !important;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 40px 0 20px;
+  }
+
+  /* Row gaps */
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .row>* {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  /* Display utilities for mobile */
+  .display-4 {
+    font-size: 1.75rem !important;
+  }
+
+  .display-5 {
+    font-size: 1.5rem !important;
+  }
+
+  /* Text utilities */
+  .fs-5 {
+    font-size: 1rem !important;
+  }
+
+  /* Buttons */
+  .btn {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 576px) {
+  .header .header-container {
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 8px 3px 8px 8px;
+  }
+
+  .header .logo img {
+    max-height: 30px;
+  }
+
+  .header .btn-getstarted {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  h1,
+  .h1 {
+    font-size: 1.5rem !important;
+  }
+
+  h2,
+  .h2 {
+    font-size: 1.35rem !important;
+  }
+
+  h3,
+  .h3 {
+    font-size: 1.15rem !important;
+  }
+
+  .display-4 {
+    font-size: 1.5rem !important;
+  }
 }
