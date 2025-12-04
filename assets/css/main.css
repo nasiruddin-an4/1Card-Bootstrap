@@ -5147,3 +5147,150 @@ input:checked+.slider:before {
 .services-section .service-item:hover .icon i {
   color: var(--brand-blue-dark);
 }
+
+/*--------------------------------------------------------------
+# Login Page Styles
+--------------------------------------------------------------*/
+.loginSection {
+  padding: 120px 0 60px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--brand-blue-dark) 0%, var(--accent-color) 100%);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.loginSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 480px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  position: relative;
+  z-index: 1;
+}
+
+.tab-section {
+  margin-bottom: 30px;
+  background: #f1f3f5;
+  padding: 5px;
+  border-radius: 50px;
+}
+
+.custom-tabs {
+  width: 100%;
+}
+
+.custom-tab {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  color: #6c757d;
+  transition: all 0.3s ease;
+}
+
+.custom-tab.active {
+  background: white;
+  color: var(--brand-blue);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+  font-weight: 700;
+  color: var(--brand-blue-dark);
+  margin-bottom: 5px;
+}
+
+.form-text {
+  color: #6c757d;
+  margin-bottom: 25px;
+}
+
+.input-group-text {
+  background: #f8f9fa;
+  border-right: none;
+  color: var(--brand-blue);
+}
+
+.form-control {
+  background: #f8f9fa;
+  border-left: none;
+  padding: 12px;
+}
+
+.form-control:focus {
+  background: white;
+  box-shadow: none;
+  border-color: #dee2e6;
+}
+
+.input-group:focus-within .input-group-text,
+.input-group:focus-within .form-control {
+  border-color: var(--brand-blue);
+  background: white;
+}
+
+.password-toggle {
+  cursor: pointer;
+  background: #f8f9fa;
+  border-left: none;
+  border-right: 1px solid #dee2e6;
+}
+
+.btn-login {
+  background: var(--brand-blue);
+  border: none;
+  padding: 12px;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+  background: var(--brand-blue-dark);
+  transform: translateY(-2px);
+}
+
+.btn2 {
+  color: #6c757d;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.btn2:hover {
+  color: var(--brand-blue);
+}
+
+.btn3 {
+  color: var(--brand-blue);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.btn3:hover {
+  color: var(--brand-blue-dark);
+}
+
+.copyRight p {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
